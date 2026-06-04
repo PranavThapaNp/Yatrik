@@ -1,0 +1,204 @@
+[
+  {
+    "name": "Pokhara",
+    "slug": "pokhara",
+    "destination_type": "city",
+    "location": "Nepal",
+    "short_description": "Pokhara is a scenic lakeside city known for Phewa Lake, stunning Himalayan views, adventure sports like paragliding, and a peaceful atmosphere making it Nepal’s top tourist destination.",
+    "category": "Nature",
+    "images": [
+      "/static/images/pkr1.jpg",
+      "/static/images/pkr2.jpg",
+      "/static/images/pkr3.jpg"
+    ]
+  },
+  {
+    "name": "Kathmandu",
+    "slug": "kathmandu",
+    "destination_type": "city",
+    "location": "Nepal",
+    "short_description": "Kathmandu, Nepal’s capital, blends ancient heritage with modern life. It features UNESCO temples, vibrant streets, historic Durbar Squares, and deep cultural traditions reflecting centuries of Himalayan civilization.",
+    "category": "Cultural",
+    "images": [
+      "/static/images/ktm1.jpg",
+      "/static/images/ktm2.jpg",
+      "/static/images/ktm3.jpg"
+    ]
+  },
+  {
+    "name": "Bhaktapur",
+    "slug": "bhaktapur",
+    "destination_type": "city",
+    "location": "Nepal",
+    "short_description": "Bhaktapur is a preserved medieval city famous for traditional Newari architecture, ancient temples, pottery squares, and rich cultural heritage that offers a glimpse into historic Nepal.",
+    "category": "Cultural",
+    "images": [
+      "/static/images/bkt1.jpg",
+      "/static/images/bkt2.jpg",
+      "/static/images/bkt3.jpg"
+    ]
+  },
+  {
+    "name": "Chitwan",
+    "slug": "chitwan",
+    "destination_type": "city",
+    "location": "Nepal",
+    "short_description": "Chitwan is home to Chitwan National Park, famous for wildlife safaris, Bengal tigers, rhinos, elephants, and dense jungles offering one of Nepal’s best nature and adventure experiences.",
+    "category": "Nature",
+    "images": [
+      "/static/images/ctn1.jpg",
+      "/static/images/ctn2.jpg",
+      "/static/images/ctn3.jpg"
+    ]
+  },
+  {
+    "name": "Lumbini",
+    "slug": "lumbini",
+    "destination_type": "city",
+    "location": "Nepal",
+    "short_description": "Lumbini is the birthplace of Lord Buddha and a major pilgrimage site featuring monasteries, sacred gardens, Ashokan pillar, and peaceful spiritual environment attracting visitors worldwide.",
+    "category": "Cultural",
+    "images": [
+      "/static/images/lbni1.jpg",
+      "/static/images/lbni2.jpg",
+      "/static/images/lbni3.jpg",
+      "/static/images/lbni4.jpg"
+    ]
+  },
+  {
+    "name": "Mustang",
+    "slug": "mustang",
+    "destination_type": "city",
+    "location": "Nepal",
+    "short_description": "Mustang is a remote Himalayan region with desert-like landscapes, ancient monasteries, caves, and Tibetan-influenced culture, offering a unique blend of adventure and spirituality.",
+    "category": "Nature",
+    "images": [
+      "/static/images/mstg1.jpg",
+      "/static/images/mstg2.jpg",
+      "/static/images/mstg3.jpg",
+      "/static/images/mstg4.jpg"
+    ]
+  },
+  {
+    "name": "Manang",
+    "slug": "manang",
+    "destination_type": "city",
+    "location": "Nepal",
+    "short_description": "Manang is a high-altitude valley surrounded by snow-capped peaks, known for breathtaking scenery, trekking routes, alpine lifestyle, and cultural richness along the Annapurna Circuit.",
+    "category": "Nature",
+    "images": [
+      "/static/images/mng1.jpg",
+      "/static/images/mng2.jpg",
+      "/static/images/mng3.jpg"
+    ]
+  },
+  {
+    "name": "Ghandruk",
+    "slug": "ghandruk",
+    "destination_type": "city",
+    "location": "Nepal",
+    "short_description": "Ghandruk is a beautiful Gurung village offering panoramic views of Annapurna and Machhapuchhre, traditional culture, stone houses, and a peaceful trekking experience.",
+    "category": "Nature",
+    "images": [
+      "/static/images/gdrk1.jpg",
+      "/static/images/gdrk2.jpg",
+      "/static/images/gdrk3.jpg"
+    ]
+  },
+  {
+    "name": "Annapurna Base Camp",
+    "slug": "annapurna-base-camp",
+    "destination_type": "trek",
+    "location": "Nepal",
+    "short_description": "Annapurna Base Camp trek takes you into the heart of the Himalayas, offering close-up views of Annapurna massif, diverse landscapes, glaciers, and unforgettable trekking adventure.",
+    "category": "Nature",
+    "images": [
+      "/static/images/abc1.jpg",
+      "/static/images/abc2.jpg",
+      "/static/images/abc3.jpg",
+      "/static/images/abc4.jpg",
+      "/static/images/abc5.jpg"
+    ]
+  },
+  {
+    "name": "Mardi Himal",
+    "slug": "mardi-himal",
+    "destination_type": "trek",
+    "location": "Nepal",
+    "short_description": "Mardi Himal trek is a short yet stunning Himalayan trail offering close views of Machhapuchhre, peaceful forests, ridge walks, and fewer crowds compared to popular routes.",
+    "category": "Nature",
+    "images": [
+      "/static/images/mrdi1.jpg",
+      "/static/images/mrdi2.jpg",
+      "/static/images/mrdi3.jpg",
+      "/static/images/mrdi4.jpg"
+    ]
+  },
+  {
+    "name": "Langtang Valley",
+    "slug": "langtang-valley",
+    "destination_type": "trek",
+    "location": "Nepal",
+    "short_description": "Langtang Valley trek offers beautiful alpine scenery, Tamang culture, glaciers, forests, and mountain views, making it one of Nepal’s most accessible and rewarding Himalayan treks.",
+    "category": "Nature",
+    "images": [
+      "/static/images/lgtg1.jpg",
+      "/static/images/lgtg2.jpg",
+      "/static/images/lgtg3.jpg"
+    ]
+  },
+  {
+    "name": "Tilicho Lake",
+    "slug": "tilicho-lake",
+    "destination_type": "trek",
+    "location": "Nepal",
+    "short_description": "Tilicho Lake is one of the world’s highest lakes, surrounded by dramatic Himalayan peaks, rugged trails, and breathtaking scenery along the Annapurna region.",
+    "category": "Nature",
+    "images": [
+      "/static/images/tlco1.jpg",
+      "/static/images/tlco2.jpg",
+      "/static/images/tlco3.jpg"
+    ]
+  },
+  {
+    "name": "Everest Base Camp",
+    "slug": "everest-base-camp",
+    "destination_type": "trek",
+    "location": "Nepal",
+    "short_description": "Everest Base Camp trek is a legendary journey through Sherpa villages, glaciers, and high-altitude landscapes leading to the base of the world’s tallest mountain, Mount Everest.",
+    "category": "Nature",
+    "images": [
+      "/static/images/ebc1.jpg",
+      "/static/images/ebc2.jpg",
+      "/static/images/ebc3.jpg",
+      "/static/images/ebc4.jpg"
+    ]
+  },
+  {
+    "name": "Manaslu Circuit",
+    "slug": "manaslu-circuit",
+    "destination_type": "trek",
+    "location": "Nepal",
+    "short_description": "Manaslu Circuit trek is a remote Himalayan journey featuring diverse landscapes, Tibetan-influenced culture, suspension bridges, and spectacular views of Mount Manaslu and surrounding peaks.",
+    "category": "Nature",
+    "images": [
+      "/static/images/mslu1.jpg",
+      "/static/images/mslu2.jpg",
+      "/static/images/mslu3.jpg",
+      "/static/images/mslu4.jpg"
+    ]
+  },
+  {
+    "name": "Ghorepani Poonhill",
+    "slug": "ghorepani-poonhill",
+    "destination_type": "trek",
+    "location": "Nepal",
+    "short_description": "Ghorepani Poonhill trek is a short and popular route offering stunning sunrise views over Annapurna and Dhaulagiri ranges, along with beautiful rhododendron forests.",
+    "category": "Nature",
+    "images": [
+      "/static/images/gp1.jpg",
+      "/static/images/gp2.jpg",
+      "/static/images/gp3.jpg"
+    ]
+  }
+]

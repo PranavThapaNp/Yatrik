@@ -21,3 +21,31 @@ class UserOut(BaseModel):
     
     class Config:
         from_attributes = True
+        
+        
+#Destinations Page
+
+class DestinationImageOut(BaseModel):
+    id: int
+    image_url : str
+    
+    class Config:
+        from_attributes = True
+
+class DestinationBase(BaseModel):
+    name : str
+    destination_type: str
+    location: str
+    short_description: str
+    category: str
+
+class DestinationCreate(DestinationBase):
+    pass
+
+class DestinationOut(DestinationBase):
+    id:int
+    slug: str
+    images : list[DestinationImageOut] = []
+    
+    class Config:
+        from_attributes = True
