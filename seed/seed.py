@@ -23,7 +23,13 @@ for item in data:
         destination_type=item["destination_type"],
         location=item["location"],
         short_description=item["short_description"],
-        category=item["category"]
+        category=item["category"],
+        full_description=item["full_description"],
+        best_time_to_visit=item["best_time_to_visit"],
+        weather=item.get("weather"),
+        altitude=item.get("altitude"),
+        highlights=item.get("highlights"),
+        activities=item.get("activities")
     )
 
     #Slug pailai xa vaney update natra insert
@@ -35,6 +41,12 @@ for item in data:
             "location": stmt.excluded.location,
             "short_description": stmt.excluded.short_description,
             "category": stmt.excluded.category,
+            "full_description": stmt.excluded.full_description,
+            "best_time_to_visit": stmt.excluded.best_time_to_visit,
+            "weather": stmt.excluded.weather,
+            "altitude": stmt.excluded.altitude,
+            "highlights": stmt.excluded.highlights,
+            "activities": stmt.excluded.activities,
         }
     )
 
@@ -58,7 +70,7 @@ for item in data:
             image_url=img
         ))
 
-    db.commit()
+db.commit()
 
 
 db.close()

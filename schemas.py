@@ -23,7 +23,7 @@ class UserOut(BaseModel):
         from_attributes = True
         
         
-#Destinations Page
+#Destinations Seed
 
 class DestinationImageOut(BaseModel):
     id: int
@@ -45,7 +45,31 @@ class DestinationCreate(DestinationBase):
 class DestinationOut(DestinationBase):
     id:int
     slug: str
+    
+    full_description: str | None = None
+    best_time_to_visit: str | None = None
+    weather: str | None = None
+    altitude: str | None = None
+    highlights: list[str] | None = None
+    activities: list[str] | None = None
+    
     images : list[DestinationImageOut] = []
     
     class Config:
         from_attributes = True
+        
+#Destinations Page
+
+class DestinationCard(BaseModel):
+    id: int
+    name: str
+    slug: str
+    destination_type: str
+    location: str
+    short_description: str
+    category: str
+    cover_image: str | None =  None
+    
+    class Config:
+        from_attributes = True
+    

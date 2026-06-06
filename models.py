@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
+from sqlalchemy.dialects.postgresql import ARRAY
 from database import Base
 
 class User(Base):
@@ -14,6 +15,7 @@ class User(Base):
 class Destinations(Base):
     __tablename__ = "destinations"
     
+    #Details Card
     id =  Column(Integer, primary_key=True, index=True)
     name = Column(String, index=True)
     slug = Column(String,unique=True, index=True)
@@ -21,6 +23,14 @@ class Destinations(Base):
     location = Column(String)
     short_description = Column(String)
     category = Column(String)
+
+    #Details Page
+    full_description = Column(String)
+    best_time_to_visit = Column(String)
+    weather = Column(String, nullable= True)
+    altitude = Column(String, nullable= True)
+    highlights = Column(ARRAY(String))
+    activities = Column(ARRAY(String))
     
     images = relationship("DestinationImage", back_populates="destination", cascade="all, delete")
 
@@ -30,5 +40,6 @@ class DestinationImage(Base):
     id = Column(Integer, primary_key=True, index=True)
     destination_id = Column(Integer, ForeignKey("destinations.id"), index=True)
     image_url = Column(String)
+    order = Column(Integer, default=0)
     
     destination = relationship("Destinations", back_populates="images")

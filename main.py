@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from database import Base, engine
-from routers import auth, users
+from routers import auth, users, destinations
 import os
 
 app = FastAPI(title="Yatrik")
@@ -14,6 +14,7 @@ Base.metadata.create_all(bind=engine)
 
 app.include_router(auth.router)
 app.include_router(users.router)
+app.include_router(destinations.router)
 
 @app.get("/")
 def root():
