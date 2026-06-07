@@ -12,6 +12,9 @@
     "altitude": "822m",
     "highlights": ["Phewa Lake", "Sarangkot Sunrise", "World Peace Pagoda", "Davis Falls"],
     "activities": ["Paragliding", "Boating", "Hiking", "Cycling"],
+    "min_days":2,
+    "recommended_days":4,
+
     "images": [
       "/static/images/pkr1.jpg",
       "/static/images/pkr2.jpg",
@@ -31,6 +34,9 @@
     "altitude": "1400m",
     "highlights": ["Swayambhunath", "Pashupatinath", "Boudhanath", "Durbar Square"],
     "activities": ["Temple visits", "Cultural tours", "Street food exploration", "Museum visits"],
+    "min_days":3,
+    "recommended_days":5,
+
     "images": [
       "/static/images/ktm1.jpg",
       "/static/images/ktm2.jpg",
@@ -50,6 +56,9 @@
     "altitude": "1400m",
     "highlights": ["Durbar Square", "Nyatapola Temple", "Pottery Square", "Local Newari culture"],
     "activities": ["Heritage walks", "Photography", "Cultural exploration", "Food tasting"],
+    "min_days":2,
+    "recommended_days":3,
+
     "images": [
       "/static/images/bkt1.jpg",
       "/static/images/bkt2.jpg",
@@ -69,6 +78,9 @@
     "altitude": "415m",
     "highlights": ["Chitwan National Park", "Jeep Safari", "Canoe Ride", "Tharu Culture"],
     "activities": ["Wildlife safari", "Bird watching", "Canoeing", "Cultural shows"],
+    "min_days":2,
+    "recommended_days":3,
+
     "images": [
       "/static/images/ctn1.jpg",
       "/static/images/ctn2.jpg",
@@ -88,6 +100,9 @@
     "altitude": "150m",
     "highlights": ["Maya Devi Temple", "Ashokan Pillar", "Monastic Zone", "Sacred Garden"],
     "activities": ["Meditation", "Pilgrimage tours", "Cultural exploration", "Photography"],
+    "min_days":2,
+    "recommended_days":3,
+
     "images": [
       "/static/images/lbni1.jpg",
       "/static/images/lbni2.jpg",
@@ -108,6 +123,9 @@
     "altitude": "3800m",
     "highlights": ["Lo Manthang", "Muktinath Temple", "Sky Caves", "Kali Gandaki Valley"],
     "activities": ["Trekking", "Cultural exploration", "Off-road jeep tours", "Photography"],
+    "min_days":2,
+    "recommended_days":3,
+
     "images": [
       "/static/images/mstg1.jpg",
       "/static/images/mstg2.jpg",
@@ -128,6 +146,9 @@
     "altitude": "3519m",
     "highlights": ["Gangapurna Lake", "Ice Lake", "Annapurna Range Views", "Braga Monastery"],
     "activities": ["Trekking", "Acclimatization hikes", "Photography", "Cultural visits"],
+    "min_days":3,
+    "recommended_days":4,
+
     "images": [
       "/static/images/mng1.jpg",
       "/static/images/mng2.jpg",
@@ -147,6 +168,9 @@
     "altitude": "2012m",
     "highlights": ["Annapurna Viewpoint", "Gurung Museum", "Traditional Village Life", "Sunrise Views"],
     "activities": ["Village walks", "Cultural experience", "Photography", "Short trekking"],
+    "min_days":1,
+    "recommended_days":2,
+
     "images": [
       "/static/images/gdrk1.jpg",
       "/static/images/gdrk2.jpg",
@@ -166,6 +190,9 @@
     "altitude": "4130m",
     "highlights": ["Annapurna Base Camp", "Machhapuchhre Base Camp", "Hot Springs", "Himalayan Amphitheatre"],
     "activities": ["Trekking", "Photography", "Cultural exploration", "Nature walks"],
+    "min_days":4,
+    "recommended_days":6,
+
     "images": [
       "/static/images/abc1.jpg",
       "/static/images/abc2.jpg",
@@ -187,6 +214,9 @@
     "altitude": "4500m",
     "highlights": ["Mardi Himal Base Camp", "Forest Camp", "High Camp Views", "Machhapuchhre Panorama"],
     "activities": ["Trekking", "Photography", "Ridge walking", "Nature exploration"],
+    "min_days":4,
+    "recommended_days":6,
+
     "images": [
       "/static/images/mrdi1.jpg",
       "/static/images/mrdi2.jpg",
@@ -207,6 +237,9 @@
     "altitude": "3870m",
     "highlights": ["Kyanjin Gompa", "Langtang Glacier", "Tamang Villages", "Yak Cheese Factory"],
     "activities": ["Trekking", "Cultural immersion", "Photography", "Hiking"],
+    "min_days":4,
+    "recommended_days":6,
+
     "images": [
       "/static/images/lgtg1.jpg",
       "/static/images/lgtg2.jpg",
@@ -226,6 +259,9 @@
     "altitude": "4919m",
     "highlights": ["Tilicho Lake", "Mesokanto Pass", "Khangsar Village", "Thorong La Route"],
     "activities": ["Trekking", "High-altitude hiking", "Photography", "Adventure travel"],
+    "min_days":5,
+    "recommended_days":7,
+
     "images": [
       "/static/images/tlco1.jpg",
       "/static/images/tlco2.jpg",
@@ -245,6 +281,9 @@
     "altitude": "5364m",
     "highlights": ["Lukla Airport", "Namche Bazaar", "Kala Patthar", "Khumbu Glacier"],
     "activities": ["Trekking", "Photography", "Cultural immersion", "Mountaineering experience"],
+    "min_days":12,
+    "recommended_days":16,
+
     "images": [
       "/static/images/ebc1.jpg",
       "/static/images/ebc2.jpg",
@@ -265,6 +304,9 @@
     "altitude": "5106m",
     "highlights": ["Larkya La Pass", "Mount Manaslu Views", "Samagaun Village", "Buddhist Monasteries"],
     "activities": ["Trekking", "Cultural exploration", "High-pass crossing", "Photography"],
+    "min_days":12,
+    "recommended_days":15,
+
     "images": [
       "/static/images/mslu1.jpg",
       "/static/images/mslu2.jpg",
@@ -285,6 +327,9 @@
     "altitude": "3210m",
     "highlights": ["Poonhill Sunrise", "Ghorepani Village", "Rhododendron Forests", "Annapurna View"],
     "activities": ["Short trekking", "Photography", "Sunrise viewing", "Village walks"],
+    "min_days":3,
+    "recommended_days":4,
+
     "images": [
       "/static/images/gp1.jpg",
       "/static/images/gp2.jpg",

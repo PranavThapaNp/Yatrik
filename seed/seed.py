@@ -29,7 +29,9 @@ for item in data:
         weather=item.get("weather"),
         altitude=item.get("altitude"),
         highlights=item.get("highlights"),
-        activities=item.get("activities")
+        activities=item.get("activities"),
+        min_days=item.get("min_days"),
+        recommended_days=item.get("recommended_days")
     )
 
     #Slug pailai xa vaney update natra insert
@@ -47,6 +49,8 @@ for item in data:
             "altitude": stmt.excluded.altitude,
             "highlights": stmt.excluded.highlights,
             "activities": stmt.excluded.activities,
+            "min_days": stmt.excluded.min_days,
+            "recommended_days": stmt.excluded.recommended_days,
         }
     )
 

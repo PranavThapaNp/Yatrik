@@ -20,9 +20,9 @@ class Destinations(Base):
     name = Column(String, index=True)
     slug = Column(String,unique=True, index=True)
     destination_type =  Column(String)
-    location = Column(String)
-    short_description = Column(String)
-    category = Column(String)
+    location = Column(String, index=True)
+    short_description = Column(String, index=True)
+    category = Column(String, index=True)
 
     #Details Page
     full_description = Column(String)
@@ -31,6 +31,10 @@ class Destinations(Base):
     altitude = Column(String, nullable= True)
     highlights = Column(ARRAY(String))
     activities = Column(ARRAY(String))
+    
+    #Duration
+    min_days = Column(Integer, nullable= False)
+    recommended_days = Column(Integer, nullable= True)
     
     images = relationship("DestinationImage", back_populates="destination", cascade="all, delete")
 

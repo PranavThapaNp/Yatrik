@@ -1,4 +1,5 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr , Field
+from enum import Enum
 
 #Registration Logic
 class UserCreate(BaseModel):
@@ -50,8 +51,8 @@ class DestinationOut(DestinationBase):
     best_time_to_visit: str | None = None
     weather: str | None = None
     altitude: str | None = None
-    highlights: list[str] | None = None
-    activities: list[str] | None = None
+    highlights: list[str] = []
+    activities: list[str] = []
     
     images : list[DestinationImageOut] = []
     
@@ -72,4 +73,45 @@ class DestinationCard(BaseModel):
     
     class Config:
         from_attributes = True
+
+
+#Itinerary generator
+
+class TravelStyle(str, Enum):
+    relaxed = "relaxed"
+    adventure = "adventure"
+    budget = "budget"
+
+#Req
+class ItineraryRequest(BaseModel):
+    destination_slug: str
+    days: int = Field(ge=1, le=30)
+    travel_style: TravelStyle
+
+#Res
+class ItineraryActivity(BaseModel):
+    time: str
+    activity: str
+    
+class ItineraryDay(BaseModel):
+    day: int
+    title: str
+    schedule: list[ItineraryActivity]
+
+class BudgetEstimate(BaseModel):
+    currency: str
+    min_amount: int
+    max_amount: int
+
+class ItineraryResponse(BaseModel):
+    destination: str
+    travel_style: TravelStyle
+    days: int
+    
+    estimated_budget: BudgetEstimate
+    
+    warning: str | None = None
+    
+    itinerary: list[ItineraryDay]
+    travel_tips: list[str] = []
     
