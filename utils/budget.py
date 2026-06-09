@@ -12,12 +12,17 @@ def calculate_budget(days: int, travel_style: str, destination_type: str):
 
     per_day = base_costs.get(travel_style, 5000)
 
-    # Trekking is more expensive
     if destination_type == "trek":
         per_day *= 1.3   # permits, guides, remote food, gear
 
-    # Adventure trips can also be slightly higher cost
-    elif destination_type == "adventure":
+    elif destination_type == "wildlife":
+        per_day *= 1.15  # safari fees, park entry, jeep costs
+
+    elif destination_type == "nature":
+        per_day *= 1.05  # transport + light activities, moderate cost
+
+    elif destination_type == "city":
+        per_day *= 0.9   # cheaper accommodation, easy transport
         per_day *= 1.15
 
     min_buffer = 0.85

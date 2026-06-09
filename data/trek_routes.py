@@ -100,6 +100,52 @@ TREK_ROUTES = {
         "Tilicho Lake",
         "Return to Manang",
         "Return to Besisahar"
-    ]
+    ],
+    
+    #8. Kanchenjunga Base Camp
+    "kanchenjunga-base-camp": [
+    "Bhadrapur",
+    "Taplejung",
+    "Suketar",
+    "Laliguras",
+    "Khesewa",
+    "Mamankhe",
+    "Yamphudin",
+    "Torongding",
+    "Tseram",
+    "Ramche",
+    "Kanchenjunga North Base Camp (Pangpema)",
+    "Return via same route to Taplejung",
+    "Return to Bhadrapur"
+    ],
+    
+    #9. Dhorpatan
+    "dhorpatan-trek": [
+    "Beni",
+    "Darbang",
+    "Lumsang",
+    "Muna",
+    "Jungar",
+    "Sibang",
+    "Phagune",
+    "Dhorpatan Hunting Reserve",
+    "Dogadi",
+    "Takam",
+    "Return to Beni"
+    ],
+    
+    #10. Gosaikunda
+    "gosaikunda-trek": [
+    "Syabrubesi",
+    "Dhunche",
+    "Chandanbari (Sing Gompa)",
+    "Cholangpati",
+    "Lauribina",
+    "Gosaikunda Lake",
+    "Suryakunda",
+    "Lauribina Pass",
+    "Return to Dhunche",
+    "Return to Kathmandu"
+    ]  
   
 }

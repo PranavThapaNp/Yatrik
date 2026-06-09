@@ -66,28 +66,6 @@
     ]
   },
   {
-    "name": "Chitwan",
-    "slug": "chitwan",
-    "destination_type": "city",
-    "location": "Nepal",
-    "short_description": "Chitwan is famous for jungle safaris and rich wildlife.",
-    "category": "Nature",
-    "full_description": "Chitwan is home to Chitwan National Park, a UNESCO World Heritage Site known for its rich biodiversity including rhinos, tigers, elephants, and exotic bird species. It is one of Nepal’s best wildlife adventure destinations.",
-    "best_time_to_visit": "October to March",
-    "weather": "Warm and humid",
-    "altitude": "415m",
-    "highlights": ["Chitwan National Park", "Jeep Safari", "Canoe Ride", "Tharu Culture"],
-    "activities": ["Wildlife safari", "Bird watching", "Canoeing", "Cultural shows"],
-    "min_days":2,
-    "recommended_days":3,
-
-    "images": [
-      "/static/images/ctn1.jpg",
-      "/static/images/ctn2.jpg",
-      "/static/images/ctn3.jpg"
-    ]
-  },
-  {
     "name": "Lumbini",
     "slug": "lumbini",
     "destination_type": "city",
@@ -134,49 +112,39 @@
     ]
   },
   {
-    "name": "Manang",
-    "slug": "manang",
+    "name": "Ilam",
+    "slug": "ilam",
     "destination_type": "city",
     "location": "Nepal",
-    "short_description": "Manang is a high-altitude valley on the Annapurna Circuit route.",
+    "short_description": "A peaceful hill town famous for lush tea gardens and rolling green hills.",
     "category": "Nature",
-    "full_description": "Manang is a breathtaking high-altitude valley surrounded by towering Himalayan peaks. It is a major stop on the Annapurna Circuit, known for its stunning landscapes, Tibetan-influenced culture, and challenging trekking environment.",
-    "best_time_to_visit": "March to November",
-    "weather": "Cold and dry with thin air",
-    "altitude": "3519m",
-    "highlights": ["Gangapurna Lake", "Ice Lake", "Annapurna Range Views", "Braga Monastery"],
-    "activities": ["Trekking", "Acclimatization hikes", "Photography", "Cultural visits"],
-    "min_days":3,
-    "recommended_days":4,
-
+    "full_description": "Ilam is renowned for its expansive tea estates, cool climate, and beautiful landscapes. Visitors enjoy tea garden walks, sunrise viewpoints, and rich local culture in eastern Nepal.",
+    "best_time_to_visit": "October to April",
+    "weather": "Cool and pleasant",
+    "altitude": "1400m",
+    "highlights": [
+      "Tea Gardens",
+      "Kanyam",
+      "Antu Danda",
+      "Local culture"
+    ],
+    "activities": [
+      "Sightseeing",
+      "Photography",
+      "Tea tourism",
+      "Nature walks"
+    ],
+    "min_days": 2,
+    "recommended_days": 3,
     "images": [
-      "/static/images/mng1.jpg",
-      "/static/images/mng2.jpg",
-      "/static/images/mng3.jpg"
+      "/static/images/ilam1.jpg",
+      "/static/images/ilam2.jpg",
+      "/static/images/ilam3.jpg"
     ]
   },
-  {
-    "name": "Ghandruk",
-    "slug": "ghandruk",
-    "destination_type": "city",
-    "location": "Nepal",
-    "short_description": "Ghandruk is a scenic Gurung village with Annapurna views.",
-    "category": "Nature",
-    "full_description": "Ghandruk is a beautiful traditional Gurung village offering spectacular views of Annapurna and Machhapuchhre. It is known for its stone houses, warm hospitality, and cultural richness along the Annapurna trekking routes.",
-    "best_time_to_visit": "September to May",
-    "weather": "Mild mountain climate",
-    "altitude": "2012m",
-    "highlights": ["Annapurna Viewpoint", "Gurung Museum", "Traditional Village Life", "Sunrise Views"],
-    "activities": ["Village walks", "Cultural experience", "Photography", "Short trekking"],
-    "min_days":1,
-    "recommended_days":2,
 
-    "images": [
-      "/static/images/gdrk1.jpg",
-      "/static/images/gdrk2.jpg",
-      "/static/images/gdrk3.jpg"
-    ]
-  },
+
+
   {
     "name": "Annapurna Base Camp",
     "slug": "annapurna-base-camp",
@@ -334,6 +302,329 @@
       "/static/images/gp1.jpg",
       "/static/images/gp2.jpg",
       "/static/images/gp3.jpg"
+    ]
+  },
+  {
+    "name": "Kanchenjunga Base Camp Trek",
+    "slug": "kanchenjunga-base-camp",
+    "destination_type": "trek",
+    "location": "Taplejung, Nepal",
+    "short_description": "A remote Himalayan trek leading to the base of the world's third-highest mountain.",
+    "category": "Adventure",
+    "full_description": "Kanchenjunga Base Camp Trek is one of Nepal's most remote and rewarding trekking adventures. Passing through pristine forests, traditional villages, and alpine landscapes, the trek offers spectacular views of Kanchenjunga (8,586m) while providing an authentic wilderness experience away from crowded trails.",
+    "best_time_to_visit": "March to May and September to November",
+    "weather": "Cold at high altitude with stable weather during trekking seasons",
+    "altitude": "5143m",
+    "highlights": [
+      "Kanchenjunga Base Camp",
+      "Remote Himalayan villages",
+      "Rhododendron forests",
+      "Panoramic mountain views"
+    ],
+    "activities": [
+      "Trekking",
+      "Photography",
+      "Camping",
+      "Nature exploration"
+    ],
+    "min_days": 18,
+    "recommended_days": 22,
+    "images": [
+      "/static/images/kbc1.jpg",
+      "/static/images/kbc2.jpg",
+      "/static/images/kbc3.jpg"
+    ]
+  },
+
+  {
+    "name": "Dhorpatan Trek",
+    "slug": "dhorpatan-trek",
+    "destination_type": "trek",
+    "location": "Baglung, Nepal",
+    "short_description": "A beautiful off-the-beaten-path trek through Nepal's only hunting reserve.",
+    "category": "Adventure",
+    "full_description": "The Dhorpatan Trek takes travelers through alpine meadows, traditional Magar villages, and Nepal's only hunting reserve. The route offers peaceful trails, diverse wildlife, and spectacular Himalayan scenery.",
+    "best_time_to_visit": "March to May and September to November",
+    "weather": "Cool to cold depending on altitude",
+    "altitude": "3500m",
+    "highlights": [
+      "Dhorpatan Hunting Reserve",
+      "Traditional villages",
+      "Alpine landscapes",
+      "Wildlife observation"
+    ],
+    "activities": [
+      "Trekking",
+      "Wildlife watching",
+      "Photography",
+      "Camping"
+    ],
+    "min_days": 7,
+    "recommended_days": 10,
+    "images": [
+      "/static/images/dhor1.jpg",
+      "/static/images/dhor2.jpg",
+      "/static/images/dhor3.jpg"
+    ]
+  },
+
+  {
+    "name": "Gosaikunda Trek",
+    "slug": "gosaikunda",
+    "destination_type": "trek",
+    "location": "Rasuwa, Nepal",
+    "short_description": "A sacred alpine lake trek in Langtang National Park.",
+    "category": "Adventure",
+    "full_description": "The Gosaikunda Trek leads to the holy alpine lakes revered by Hindus and Buddhists. Surrounded by snow-capped peaks and pristine landscapes, it combines natural beauty with spiritual significance.",
+    "best_time_to_visit": "March to May and September to November",
+    "weather": "Cold at higher elevations",
+    "altitude": "4380m",
+    "highlights": [
+      "Gosaikunda Lake",
+      "Langtang National Park",
+      "Lauribina Pass",
+      "Mountain panoramas"
+    ],
+    "activities": [
+      "Trekking",
+      "Pilgrimage",
+      "Photography",
+      "Nature exploration"
+    ],
+    "min_days": 5,
+    "recommended_days": 7,
+    "images": [
+      "/static/images/gos1.jpg",
+      "/static/images/gos2.jpg",
+      "/static/images/gos3.jpg"
+    ]
+  },
+
+
+
+  {
+    "name": "Manang",
+    "slug": "manang",
+    "destination_type": "nature",
+    "location": "Nepal",
+    "short_description": "Manang is a high-altitude valley on the Annapurna Circuit route.",
+    "category": "Nature",
+    "full_description": "Manang is a breathtaking high-altitude valley surrounded by towering Himalayan peaks. It is a major stop on the Annapurna Circuit, known for its stunning landscapes, Tibetan-influenced culture, and challenging trekking environment.",
+    "best_time_to_visit": "March to November",
+    "weather": "Cold and dry with thin air",
+    "altitude": "3519m",
+    "highlights": ["Gangapurna Lake", "Ice Lake", "Annapurna Range Views", "Braga Monastery"],
+    "activities": ["Trekking", "Acclimatization hikes", "Photography", "Cultural visits"],
+    "min_days":3,
+    "recommended_days":4,
+
+    "images": [
+      "/static/images/mng1.jpg",
+      "/static/images/mng2.jpg",
+      "/static/images/mng3.jpg"
+    ]
+  },
+  {
+    "name": "Ghandruk",
+    "slug": "ghandruk",
+    "destination_type": "nature",
+    "location": "Nepal",
+    "short_description": "Ghandruk is a scenic Gurung village with Annapurna views.",
+    "category": "Nature",
+    "full_description": "Ghandruk is a beautiful traditional Gurung village offering spectacular views of Annapurna and Machhapuchhre. It is known for its stone houses, warm hospitality, and cultural richness along the Annapurna trekking routes.",
+    "best_time_to_visit": "September to May",
+    "weather": "Mild mountain climate",
+    "altitude": "2012m",
+    "highlights": ["Annapurna Viewpoint", "Gurung Museum", "Traditional Village Life", "Sunrise Views"],
+    "activities": ["Village walks", "Cultural experience", "Photography", "Short trekking"],
+    "min_days":1,
+    "recommended_days":2,
+
+    "images": [
+      "/static/images/gdrk1.jpg",
+      "/static/images/gdrk2.jpg",
+      "/static/images/gdrk3.jpg"
+    ]
+  },
+  {
+    "name": "Rara Lake",
+    "slug": "rara-lake",
+    "destination_type": "nature",
+    "location": "Mugu, Nepal",
+    "short_description": "Nepal's largest freshwater lake surrounded by pristine forests.",
+    "category": "Nature",
+    "full_description": "Rara Lake is one of Nepal's most spectacular natural destinations, known for its crystal-clear blue waters, peaceful surroundings, and untouched wilderness inside Rara National Park.",
+    "best_time_to_visit": "April to June and September to November",
+    "weather": "Cool throughout the year",
+    "altitude": "2990m",
+    "highlights": [
+      "Rara Lake",
+      "Rara National Park",
+      "Murma Top",
+      "Wildlife"
+    ],
+    "activities": [
+      "Boating",
+      "Photography",
+      "Nature walks",
+      "Camping"
+    ],
+    "min_days": 3,
+    "recommended_days": 5,
+    "images": [
+      "/static/images/rara1.jpg",
+      "/static/images/rara2.jpg",
+      "/static/images/rara3.jpg"
+    ]
+  },
+  {
+    "name": "Shey Phoksundo",
+    "slug": "shey-phoksundo",
+    "destination_type": "nature",
+    "location": "Dolpa, Nepal",
+    "short_description": "A stunning alpine lake surrounded by dramatic cliffs and national park landscapes.",
+    "category": "Nature",
+    "full_description": "Shey Phoksundo National Park is home to Nepal's deepest lake and spectacular mountain scenery. It offers visitors a unique combination of Tibetan culture, wilderness, and breathtaking landscapes.",
+    "best_time_to_visit": "May to October",
+    "weather": "Cool and dry",
+    "altitude": "3612m",
+    "highlights": [
+      "Phoksundo Lake",
+      "Waterfall",
+      "Shey Phoksundo National Park",
+      "Traditional villages"
+    ],
+    "activities": [
+      "Sightseeing",
+      "Photography",
+      "Nature walks",
+      "Wildlife observation"
+    ],
+    "min_days": 4,
+    "recommended_days": 6,
+    "images": [
+      "/static/images/phok1.jpg",
+      "/static/images/phok2.jpg",
+      "/static/images/phok3.jpg"
+    ]
+  },
+
+
+  {
+    "name": "Chitwan",
+    "slug": "chitwan",
+    "destination_type": "wildlife",
+    "location": "Nepal",
+    "short_description": "Chitwan is famous for jungle safaris and rich wildlife.",
+    "category": "Nature",
+    "full_description": "Chitwan is home to Chitwan National Park, a UNESCO World Heritage Site known for its rich biodiversity including rhinos, tigers, elephants, and exotic bird species. It is one of Nepal’s best wildlife adventure destinations.",
+    "best_time_to_visit": "October to March",
+    "weather": "Warm and humid",
+    "altitude": "415m",
+    "highlights": ["Chitwan National Park", "Jeep Safari", "Canoe Ride", "Tharu Culture"],
+    "activities": ["Wildlife safari", "Bird watching", "Canoeing", "Cultural shows"],
+    "min_days":2,
+    "recommended_days":3,
+
+    "images": [
+      "/static/images/ctn1.jpg",
+      "/static/images/ctn2.jpg",
+      "/static/images/ctn3.jpg"
+    ]
+  },
+  {
+    "name": "Bardia National Park",
+    "slug": "bardia-national-park",
+    "destination_type": "wildlife",
+    "location": "Bardiya, Nepal",
+    "short_description": "Nepal's largest lowland national park known for wildlife safaris.",
+    "category": "Wildlife",
+    "full_description": "Bardia National Park offers excellent opportunities to spot Bengal tigers, one-horned rhinoceroses, elephants, crocodiles, and hundreds of bird species in an untouched jungle environment.",
+    "best_time_to_visit": "October to March",
+    "weather": "Warm and dry",
+    "altitude": "152m",
+    "highlights": [
+      "Tiger safari",
+      "Elephant sightings",
+      "Bird watching",
+      "Jungle walks"
+    ],
+    "activities": [
+      "Jeep safari",
+      "Bird watching",
+      "Nature photography",
+      "River activities"
+    ],
+    "min_days": 2,
+    "recommended_days": 4,
+    "images": [
+      "/static/images/bardia1.jpg",
+      "/static/images/bardia2.jpg",
+      "/static/images/bardia3.jpg"
+    ]
+  },
+
+  {
+    "name": "Koshi Tappu Wildlife Reserve",
+    "slug": "koshi-tappu",
+    "destination_type": "wildlife",
+    "location": "Sunsari, Nepal",
+    "short_description": "A paradise for bird lovers and wetland wildlife enthusiasts.",
+    "category": "Wildlife",
+    "full_description": "Koshi Tappu Wildlife Reserve protects Nepal's important wetland ecosystem and is internationally recognized for migratory birds, wild water buffalo, and diverse aquatic habitats.",
+    "best_time_to_visit": "October to March",
+    "weather": "Warm and pleasant",
+    "altitude": "75m",
+    "highlights": [
+      "Migratory birds",
+      "Wild water buffalo",
+      "Wetland ecosystem",
+      "Nature reserve"
+    ],
+    "activities": [
+      "Bird watching",
+      "Photography",
+      "Boat rides",
+      "Nature tours"
+    ],
+    "min_days": 2,
+    "recommended_days": 3,
+    "images": [
+      "/static/images/koshi1.jpg",
+      "/static/images/koshi2.jpg",
+      "/static/images/koshi3.jpg"
+    ]
+  },
+
+  {
+    "name": "Shuklaphanta National Park",
+    "slug": "shuklaphanta",
+    "destination_type": "wildlife",
+    "location": "Kanchanpur, Nepal",
+    "short_description": "A hidden wildlife gem famous for vast grasslands and swamp deer.",
+    "category": "Wildlife",
+    "full_description": "Shuklaphanta National Park is known for its extensive grasslands, swamp deer population, Bengal tigers, elephants, and exceptional bird diversity, making it one of Nepal's underrated wildlife destinations.",
+    "best_time_to_visit": "October to March",
+    "weather": "Warm and dry",
+    "altitude": "174m",
+    "highlights": [
+      "Swamp deer",
+      "Grasslands",
+      "Tiger habitat",
+      "Bird watching"
+    ],
+    "activities": [
+      "Jeep safari",
+      "Bird watching",
+      "Photography",
+      "Nature exploration"
+    ],
+    "min_days": 2,
+    "recommended_days": 3,
+    "images": [
+      "/static/images/shuk1.jpg",
+      "/static/images/shuk2.jpg",
+      "/static/images/shuk3.jpg"
     ]
   }
 ]

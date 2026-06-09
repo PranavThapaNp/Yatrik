@@ -115,3 +115,12 @@ class ItineraryResponse(BaseModel):
     itinerary: list[ItineraryDay]
     travel_tips: list[str] = []
     
+
+#Random forest
+class RecommendRequest(BaseModel):
+    budget: int
+    days: int
+    season: str
+    travel_style: str
+    destination_type: str
+    

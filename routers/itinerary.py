@@ -46,11 +46,13 @@ def generate_itinerary(
         )
     
     #Routes
-    route = TREK_ROUTES.get(request.destination_slug)
-
     is_trek = destination.destination_type == "trek"
 
+    route_text = ""
+
     if is_trek:
+        route = TREK_ROUTES.get(request.destination_slug)
+
         if not route:
             raise HTTPException(
                 status_code=400,
@@ -58,11 +60,14 @@ def generate_itinerary(
             )
 
         route_text = "\n".join(route)
+
     else:
         route_text = f"""
-    City-based travel (no trekking route).
+    City/Wildlife/Nature travel.
 
-    Focus on sightseeing, culture, food, and attractions in {destination.name}.
+    Destination type: {destination.destination_type}
+
+    Focus on realistic experiences in {destination.name}.
     """
     
     #Days validation
@@ -150,7 +155,17 @@ RULES:
 
 ---
 
+DESTINATION TYPE:
+{destination.destination_type}
+
+RULES BY TYPE:
+- city → sightseeing, food, culture, short travel distances
+- trek → hiking routes, altitude progression, trekking pace
+- wildlife → safari, jungle activities, jeep rides
+- nature → lakes, viewpoints, scenic relaxation
+
 OUTPUT FORMAT (STRICT JSON ONLY):
+
 
 {{
   "itinerary": [
