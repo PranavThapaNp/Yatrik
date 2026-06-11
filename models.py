@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey, UniqueConstraint
 from sqlalchemy.orm import relationship
 from sqlalchemy.dialects.postgresql import ARRAY
 from database import Base
@@ -11,6 +11,12 @@ class User(Base):
     email = Column(String, unique = True, index = True)
     phone = Column(String, nullable = False)
     hashed_password = Column(String)
+    
+    saved_destinations = relationship(
+        "SavedDestination",
+        back_populates="user",
+        cascade= "all, delete-orphan"
+    )
 
 class Destinations(Base):
     __tablename__ = "destinations"
@@ -37,6 +43,12 @@ class Destinations(Base):
     recommended_days = Column(Integer, nullable= True)
     
     images = relationship("DestinationImage", back_populates="destination", cascade="all, delete")
+    
+    saved_by = relationship(
+        "SavedDestination",
+        back_populates="destination",
+        cascade= "all, delete-orphan"
+    )
 
 class DestinationImage(Base):
     __tablename__ = "destination_images"
@@ -47,3 +59,39 @@ class DestinationImage(Base):
     order = Column(Integer, default=0)
     
     destination = relationship("Destinations", back_populates="images")
+
+
+class SavedDestination(Base):
+    __tablename__ = "saved_destinations"
+    
+    __table_args__ =(
+        UniqueConstraint(
+            "user_id",
+            "destination_id",
+            name="unique_saved_destination"
+        ),
+    )
+    
+    id = Column(Integer, primary_key=True, index=True)
+    
+    user_id = Column(
+        Integer,
+        ForeignKey("users.id", ondelete="CASCADE"),
+        nullable= False
+    )
+    
+    destination_id = Column(
+        Integer,
+        ForeignKey("destinations.id", ondelete="CASCADE"),
+        nullable= False
+    )
+    
+    user = relationship(
+        "User",
+        back_populates="saved_destinations"
+    )
+    
+    destination = relationship(
+        "Destinations",
+        back_populates="saved_by"
+    )

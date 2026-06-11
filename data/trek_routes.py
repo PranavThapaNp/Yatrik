@@ -59,7 +59,7 @@ TREK_ROUTES = {
     ],
 
     # 5. Ghorepani Poon Hill Trek
-    "poon-hill": [
+    "ghorepani-poonhill": [
         "Pokhara",
         "Nayapul",
         "Tikhedhunga",
@@ -135,7 +135,7 @@ TREK_ROUTES = {
     ],
     
     #10. Gosaikunda
-    "gosaikunda-trek": [
+    "gosaikunda": [
     "Syabrubesi",
     "Dhunche",
     "Chandanbari (Sing Gompa)",

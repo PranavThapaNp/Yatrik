@@ -7,7 +7,7 @@ import joblib
 
 df = pd.read_csv("data/recommendation_dataset.csv")
 
-X = df[["budget", "days", "season", "travel_style", "destination_type"]] #yo chei features/input
+X = df[["budget", "days", "season", "travel_style", "destination_type"]].copy() #yo chei features/input
 y = df["destination"] #target, features ko basis ma paune
 
 #Non-numeric value lai encode garnu parxa
@@ -15,8 +15,11 @@ encoders = {}
 
 for col in ["season", "travel_style", "destination_type"]:
     le = LabelEncoder()
-    X[col] = le.fit_transform(X[col])
-    encoders[col] = le
+    X[col] = le.fit_transform(X[col].astype(str))
+    encoders[col] = {
+        "encoder": le,
+        "classes": set(le.classes_)
+    }
     
 #Destination lai encode gareko
 target_encoder = LabelEncoder()

@@ -204,6 +204,13 @@ OUTPUT FORMAT (STRICT JSON ONLY):
 
     #Safe JSON parsing ko lagi
     try:
+        ai_response = completion.choices[0].message.content
+
+        # remove markdown formatting if LLM adds it
+        ai_response = re.sub(r"```json", "", ai_response)
+        ai_response = re.sub(r"```", "", ai_response)
+        ai_response = ai_response.strip()
+
         ai_data = json.loads(ai_response)
 
     except Exception as e:

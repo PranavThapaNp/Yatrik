@@ -1,28 +1,41 @@
 import joblib
 import numpy as np
+import pandas as pd
 
 #Load trained articles
 model = joblib.load("ml/recommender_model.pkl")
 encoders = joblib.load("ml/feature_encoders.pkl")
 target_encoder = joblib.load("ml/target_encoder.pkl")
 
-def encode_input(data: dict): #Convert raw user input into ML format
-  
+
+def encode_input(data: dict):
+
     encoded = []
 
-    # numerical
     encoded.append(data["budget"])
     encoded.append(data["days"])
 
-    # categorical
-    data["season"] = data["season"].lower()
-    data["travel_style"] = data["travel_style"].lower()
-    data["destination_type"] = data["destination_type"].lower()
+    season = str(data["season"]).lower().strip()
+    travel_style = str(data["travel_style"]).lower().strip()
+    destination_type = str(data["destination_type"]).lower().strip()
 
-    for col in ["season", "travel_style", "destination_type"]:
-        encoded.append(encoders[col].transform([data[col]])[0])
+    def safe_transform(col, value):
+        le = encoders[col]
+        if value in le.classes_:
+            return le.transform([value])[0]
+        return 0
 
-    return np.array(encoded).reshape(1, -1)
+    encoded.append(safe_transform("season", season))
+    encoded.append(safe_transform("travel_style", travel_style))
+    encoded.append(safe_transform("destination_type", destination_type))
+
+    return pd.DataFrame([encoded], columns=[
+        "budget",
+        "days",
+        "season",
+        "travel_style",
+        "destination_type"
+    ])
 
 
 def predict_top_3(data: dict): #Returns top 3 recommended destinations using probabilities

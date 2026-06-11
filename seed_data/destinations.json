@@ -590,9 +590,9 @@
     "min_days": 2,
     "recommended_days": 3,
     "images": [
-      "/static/images/koshi1.jpg",
-      "/static/images/koshi2.jpg",
-      "/static/images/koshi3.jpg"
+      "/static/images/koshi1.png",
+      "/static/images/koshi2.png",
+      "/static/images/koshi3.png"
     ]
   },
 
@@ -622,9 +622,9 @@
     "min_days": 2,
     "recommended_days": 3,
     "images": [
-      "/static/images/shuk1.jpg",
-      "/static/images/shuk2.jpg",
-      "/static/images/shuk3.jpg"
+      "/static/images/shuk1.png",
+      "/static/images/shuk2.png",
+      "/static/images/shuk3.png"
     ]
   }
 ]
