@@ -1,0 +1,54 @@
+.explore-page {
+  padding: 60px 100px;
+  font-family: "Inter", sans-serif;
+  background: #f8fafc;
+}
+
+/* HEADER */
+.explore-header {
+  margin-bottom: 30px;
+}
+
+.explore-header h1 {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.explore-header p {
+  color: #6b7280;
+  margin-top: 5px;
+}
+
+/* SEARCH BAR */
+.explore-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.explore-bar input,
+.explore-bar select {
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.explore-bar input {
+  flex: 1;
+}
+
+/* LOADING */
+.loading {
+  color: #6b7280;
+}
+
+/* GRID (IMPORTANT) */
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+

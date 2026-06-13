@@ -1,20 +1,48 @@
 import { useEffect, useState } from "react";
-import { searchDestinations, getPopularDestinations } from "../api/homeApi";
+import {
+  searchDestinations,
+  getPopularDestinations,
+} from "../api/homeApi";
 import { Link } from "react-router-dom";
+import DestinationCard from "../components/DestinationCard";
+import DestinationFilter from "../components/DestinationFilter";
+import "../styles/home.css";
 
 export default function Home() {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
   const [popular, setPopular] = useState([]);
+  const [destinationType, setDestinationType] = useState("trek"); // default category
 
-  // Load popular treks once
+  // Load default category (trek) on first render
   useEffect(() => {
-    getPopularDestinations()
-      .then((res) => setPopular(res.data))
-      .catch((err) => console.log(err));
+    const fetchInitial = async () => {
+      try {
+        const res = await searchDestinations("", destinationType);
+        setPopular(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchInitial();
   }, []);
 
-  // Debounced search
+  // CATEGORY FILTER (backend-driven)
+  useEffect(() => {
+    const fetchFiltered = async () => {
+      try {
+        const res = await searchDestinations("", destinationType);
+        setPopular(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchFiltered();
+  }, [destinationType]);
+
+  // SEARCH (debounced backend search)
   useEffect(() => {
     if (search.trim().length < 2) {
       setResults([]);
@@ -28,180 +56,122 @@ export default function Home() {
       } catch (err) {
         console.log(err);
       }
-    }, 400);
+    }, 350);
 
     return () => clearTimeout(timer);
   }, [search]);
 
   return (
-    <div style={{ padding: "20px" }}>
-      {/* HERO SECTION */}
-      <section style={{ textAlign: "center", marginBottom: "50px" }}>
-        <h1>Explore Nepal with Yatrik 🌄</h1>
-        <p>
-          Discover breathtaking treks, vibrant cities, wildlife adventures and
-          unforgettable experiences across Nepal.
-        </p>
-      </section>
+    <div className="home-page">
 
-      {/* SEARCH SECTION */}
-      <section
-        style={{
-          marginBottom: "50px",
-          maxWidth: "600px",
-          marginInline: "auto",
-          position: "relative",
-        }}
-      >
-        <input
-          type="text"
-          placeholder="Search destinations..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          style={{
-            width: "100%",
-            padding: "12px",
-            fontSize: "16px",
-          }}
-        />
+      {/* HERO */}
+      <section className="hero">
+        <div className="hero-overlay" />
 
-        {/* Search Results */}
-        {results.length > 0 && (
-          <div
-            style={{
-              border: "1px solid #ddd",
-              marginTop: "5px",
-              background: "#fff",
-              textAlign: "left",
-            }}
-          >
-            {results.map((item) => (
-              <Link
-                key={item.id}
-                to={`/destinations/${item.slug}`}
-                style={{
-                  display: "block",
-                  padding: "10px",
-                  borderBottom: "1px solid #eee",
-                  textDecoration: "none",
-                  color: "black",
-                }}
-              >
-                <strong>{item.name}</strong>
-                <br />
-                <small>{item.location}</small>
-              </Link>
-            ))}
+        <div className="hero-content">
+          <h1>Explore Nepal with Yatrik 🌄</h1>
+          <p>
+            Discover treks, cities, wildlife & unforgettable journeys.
+          </p>
+
+          {/* SEARCH */}
+          <div className="search-wrapper">
+            <input
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search destinations..."
+            />
+
+            {results.length > 0 && (
+              <div className="search-dropdown">
+                {results.map((item) => (
+                  <Link
+                    key={item.id}
+                    to={`/destinations/${item.slug}`}
+                    className="search-item"
+                  >
+                    <strong>{item.name}</strong>
+                    <span>{item.location}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </section>
 
-      {/* POPULAR TREKS */}
-      <section style={{ marginBottom: "50px" }}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <h2>🔥 Popular Treks</h2>
+      {/* FILTER (NO "ALL" OPTION) */}
+      <section className="filter-section">
+        <h2>Explore Categories</h2>
 
-          <Link to="/destinations">
-            <button>View All</button>
+        <DestinationFilter
+          destinationType={destinationType}
+          setDestinationType={setDestinationType}
+        />
+      </section>
+
+      {/* DESTINATIONS */}
+      <section className="popular-section">
+        <div className="section-header">
+          <h2>🔥 Destinations</h2>
+
+          <Link to="/destinations" className="view-all">
+            View All →
           </Link>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            gap: "20px",
-            flexWrap: "wrap",
-            marginTop: "20px",
-          }}
-        >
+        <div className="card-grid">
           {popular.slice(0, 4).map((item) => (
-            <div
-              key={item.id}
-              style={{
-                border: "1px solid #ddd",
-                borderRadius: "8px",
-                padding: "15px",
-                width: "250px",
-              }}
-            >
-              {item.cover_image && (
-                <img
-                  src={`http://127.0.0.1:8000${item.cover_image}`}
-                  alt={item.name}
-                  style={{
-                    width: "100%",
-                    height: "150px",
-                    objectFit: "cover",
-                    borderRadius: "6px",
-                  }}
-                />
-              )}
-
-              <h3>{item.name}</h3>
-
-              <p>{item.short_description}</p>
-
-              <Link to={`/destinations/${item.slug}`}>
-                <button>View Details</button>
-              </Link>
-            </div>
+            <DestinationCard key={item.id} destination={item} />
           ))}
         </div>
       </section>
 
-      {/* WHY CHOOSE YATRIK */}
-      <section style={{ marginBottom: "50px" }}>
+      {/* WHY SECTION */}
+      <section className="why-section">
         <h2>Why Choose Yatrik?</h2>
 
-        <div
-          style={{
-            display: "flex",
-            gap: "20px",
-            justifyContent: "center",
-            flexWrap: "wrap",
-          }}
-        >
-          <div>
+        <div className="why-grid">
+          <div className="why-card">
             <h3>🤖 AI Itineraries</h3>
-            <p>Generate personalized travel plans in seconds.</p>
+            <p>Generate fully personalized travel plans in seconds based on your style and budget.</p>
           </div>
 
-          <div>
+          <div className="why-card">
             <h3>🧠 Smart Recommendations</h3>
-            <p>Machine learning suggests destinations you'll love.</p>
+            <p>Discover destinations ranked using intelligent preference-based suggestions.</p>
           </div>
 
-          <div>
+          <div className="why-card">
             <h3>❤️ Save Trips</h3>
-            <p>Bookmark your favorite destinations for later.</p>
+            <p>Bookmark your favorite places and build your dream travel list easily.</p>
           </div>
 
-          <div>
+          <div className="why-card">
             <h3>🇳🇵 Nepal Focused</h3>
-            <p>Built specifically for exploring Nepal's beauty.</p>
+            <p>Built specifically to explore Nepal’s mountains, cities, and hidden gems.</p>
           </div>
         </div>
       </section>
 
+      {/* About Us */}
+      <section className="about-section">
+        <h2>About Yatrik</h2>
+        <p>
+          Yatrik is a Nepal-focused travel platform designed to help travelers
+          discover the beauty of Nepal through smart recommendations, curated
+          destinations, and AI-powered itineraries.
+          <br /><br />
+          Whether you're planning treks in the Himalayas, exploring vibrant cities,
+          or searching for hidden natural gems, Yatrik makes travel planning simple,
+          intelligent, and personalized.
+        </p>
+      </section>  
+
       {/* FOOTER */}
-      <footer
-        style={{
-          borderTop: "1px solid #ddd",
-          paddingTop: "20px",
-          textAlign: "center",
-        }}
-      >
+      <footer className="footer">
         <h3>Yatrik</h3>
-
         <p>Explore Nepal Smarter.</p>
-
-        <p>© 2026 Yatrik. All rights reserved.</p>
       </footer>
     </div>
   );

@@ -1,0 +1,111 @@
+.itinerary-page {
+  display: flex;
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: "Inter", sans-serif;
+}
+
+/* LEFT PANEL */
+.itinerary-left {
+  width: 35%;
+  padding: 60px;
+  background: white;
+  border-right: 1px solid #e5e7eb;
+}
+
+.itinerary-left h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.itinerary-left p {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* FORM */
+.form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-card label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-card select,
+.form-card input {
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-card button {
+  margin-top: 10px;
+  padding: 14px;
+  background: #0f766e;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* RIGHT PANEL */
+.itinerary-right {
+  width: 65%;
+  padding: 60px;
+  overflow-y: auto;
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 120px;
+  color: #6b7280;
+}
+
+/* RESULT CARD */
+.result-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.meta {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.budget {
+  background: #f1f5f9;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.warning {
+  background: #fff7ed;
+  color: #9a3412;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* DAY CARDS */
+.day-card {
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 4px solid #0f766e;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+/* TIPS */
+.tips {
+  margin-top: 30px;
+}
